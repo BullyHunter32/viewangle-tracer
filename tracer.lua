@@ -25,7 +25,7 @@ hook.Add("HUDPaint", "", function()
     curAngle = LocalPlayer():EyeAngles()
     local diffX = math.NormalizeAngle(-(prevAngle.x - curAngle.x))
     local diffY = math.NormalizeAngle(-(curAngle.y - prevAngle.y))
-    local mult = 3 --math.sqrt((diffX * diffX) + (diffY * diffY))
+    local mult = 6 --math.sqrt((diffX * diffX) + (diffY * diffY))
 
     local cx, cy = ScrW()/2, ScrH()/2
     local x = (diffY)*mult
