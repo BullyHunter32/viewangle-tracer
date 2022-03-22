@@ -32,7 +32,7 @@ hook.Add("HUDPaint", "", function()
     local y = (diffX)*mult
 
     local len = #traceData
-    if x ~= 0 and y ~= 0 and input.IsKeyDown(triggerKey) and len < maxLength then
+    if x ~= 0 or y ~= 0 and input.IsKeyDown(triggerKey) and len < maxLength then
         table.insert(traceData, {x, y})
     end
 
